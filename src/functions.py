@@ -43,14 +43,15 @@ def deposit(N, L, radius):
         com_i = uniform(0., L, 2)
         for j in range(i):
             dist2, dist = distance(com_i, com_parts[j])
-            if dist <= radius:
-                com_i[0] = com_i[0] + np.abs(radius - dist)
-                com_i[1] = com_i[1] + np.abs(radius - dist)
+            if dist <= 2 * radius:
+                com_i[0] = com_i[0] + 2*radius
+                com_i[1] = com_i[1] + 2*radius
         com_parts[i] = com_i
     return com_parts
     
-def plot_com(positions):
+def plot_com(positions, radius):
     position_x = positions[:, 0]
     position_y = positions[:, 1]
-    plt.scatter(position_x, position_y)
+    plt.scatter(position_x, position_y, s = radius)
+    plt.show()
   
