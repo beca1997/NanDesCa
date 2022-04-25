@@ -1,3 +1,3 @@
-NanoFoam
+NanDesCa
 ========
-Simulates the formation of a nanofoam assembled by nanoparticles
+NanDesCa (Nanoparticles DepoSit and CoAlescence) simulates the formation of a nanofoam assembled by nanoparticles deposited on a surface
